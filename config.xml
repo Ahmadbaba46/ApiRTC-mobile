@@ -25,7 +25,11 @@
     <platform name="android">
         <allow-intent href="market:*" />
         <preference name="android-minSdkVersion" value="21" />
-
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.RECORD_AUDIO" />
+            <uses-permission android:name="android.permission.CAMERA" />
+            <uses-feature android:name="android.hardware.camera" />
+        </config-file>
         <uses-permission android:name="android.permission.CAMERA" />
         <uses-permission android:name="android.permission.RECORD_AUDIO" />
         <uses-feature android:name="android.hardware.camera" />
